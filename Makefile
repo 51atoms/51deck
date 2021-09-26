@@ -1,6 +1,7 @@
 all: topPlate.stl baseCase.stl
-	echo sihentisehnt
-topPlate.stl:
+topPlate.stl: topPlate.scad
 	openscad -o topPlate.stl topPlate.scad
-baseCase.stl:
+baseCase.stl: baseCase.scad
 	openscad -o baseCase.stl baseCase.scad
+clean:
+	rm *.stl
